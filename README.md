@@ -2,7 +2,7 @@
 
 I REQUESTED TAMA ORGANIZATIONSA TO HOST DEMO FOR 20 DAYS. PLEASE SEE LINK BELOW
 
-# DEMO : https://tamaorganizationsa.org/newsApi/
+# LIVE DEMO : https://tamaorganizationsa.org/newsApi/
     *LOGIN USERNAME: 123@gmail.com
     *LOGIN PASSWORD: 123
     *FEEL FREE TO CREATE YOUR OWN ACCOUNT
