@@ -14,4 +14,5 @@ I REQUESTED TAMA ORGANIZATIONSA TO HOST DEMO FOR 20 DAYS. PLEASE SEE LINK BELOW
   * INSTALL IMPORT DATABASE FILE(newsApi/model/news.sql)
   * open browser:
   * run : localhost:newsApi
-  * enjoy your system.
+  * enjoy your system
+  * find UML n DB structure @ newsApi/model/(find pdf documents here)
