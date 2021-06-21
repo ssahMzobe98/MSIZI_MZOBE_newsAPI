@@ -340,12 +340,56 @@ header .header .nav3{
 	border-radius: 5px;
 
 }
-.content .body-content .displayTodaysNews .empty{
+.content .body-content .displayTodaysNews .empty,.rangeError.progress,.redirectingMess{
 	width: 25%;
 	border-radius: 1px solid #ddd;
+	background-color: red;
+	color: #f3f3f3;
+	padding: 10px 0;
+	box-shadow: 0 8px 6px -6px black;
+	border-radius: 10px;
+
 }
-.content .body-content .displayTodaysNews .empty select{
+.content .body-content .displayTodaysNews .loadNews{
 	width: 100%;
+	display: flex;
+}
+.content .body-content .displayTodaysNews .empty .loadNews select{
+	width: 70%;
+	border: none;
+	color: #f3f3f3;
+	background-color: red;
+	padding: 5px;
+	cursor: pointer;
+}
+.content .body-content .displayTodaysNews .empty .loadNews .btn{
+	width: 30%;
+	background-color: navy;
+	color: #f3f3f3;
+	padding: 5px;
+}
+.content .body-content .displayTodaysNews .empty #hide{
+	display: none;
+}
+.content .body-content .displayTodaysNews .empty #show{
+	display: block;
+}
+.content .body-content .displayTodaysNews .empty .errorShow{
+	width: 98%;
+	background-color: #000;
+	color: red;
+	padding: 1px 0;
+}
+.content .body-content .displayTodaysNews .empty .emptyInput{
+	background-color: #000;
+	color: red;
+	width: 100%;
+	padding: 10px 0;
+}
+.content .body-content .displayTodaysNews .progress{
+	width: 18%;
+	height: 200px;
+	
 }
 @media only screen and (max-width: 800px){
 	.content .arr{
@@ -355,6 +399,9 @@ header .header .nav3{
 	.content .mac{
 		width:98%;
 		margin-top:13%;
+	}
+	.content .body-content .displayTodaysNews .empty{
+		width: 98%;
 	}
 }
 

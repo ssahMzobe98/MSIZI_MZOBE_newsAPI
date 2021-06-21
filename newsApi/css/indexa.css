@@ -340,7 +340,13 @@ header .header .nav3{
 	border-radius: 5px;
 
 }
-
+.content .body-content .displayTodaysNews .empty{
+	width: 25%;
+	border-radius: 1px solid #ddd;
+}
+.content .body-content .displayTodaysNews .empty select{
+	width: 100%;
+}
 @media only screen and (max-width: 800px){
 	.content .arr{
 		width:98%;
