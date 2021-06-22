@@ -9,6 +9,11 @@ $pass="";
 $dbnam="news";
 $conn=mysqli_connect($host,$user,$pass,$dbnam)or die("Connection was not established!!");
 class mzobeNewsApi{
+	public function isNewsLoaded(){
+		global $conn;
+		$_=$conn->query("select*from newsdb");
+		return ($_->num_rows>0);
+	}
 	public function autoload(){
 		$tz = new DateTimeZone("Africa/Johannesburg");
 		$now = new DateTime("now", $tz);
@@ -25,6 +30,9 @@ class mzobeNewsApi{
 			// $this->getMzobeNews();
 		// }
 	}
+	// public function requestRemovalOfNews(){
+
+	// }
 	public function getTodaysNews(){
 		global $conn;
 		$todaysDate=date("Y-m-d");

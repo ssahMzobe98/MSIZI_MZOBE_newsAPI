@@ -20,8 +20,50 @@ $API=new mzobeNewsApi();
 		</div>
 	</div>	
 </div>
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="dd" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Remove All News</h4>
+        </div>
+        <div class="modal-body">
+          <p>Do you want to remove All Saved News?</p>
+        </div>
+        <div class="flex">
+        	<div class="no" id="remove"><button class="btn">Remove News</button></div>
+        	<a href="../controller/exit.php"><div class="Yes"><button class="btn">Save News</button></div></a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
 <script>
 	$(document).ready(function(){
+		$("#remove").click(function(){
+			const remove="remove";
+			$.ajax({
+					url: "../controller/upload.php?apiremove=1",
+					type: "POST",
+					data: {
+						remove: remove
+					},
+					cache: false,
+					success: function(response){
+						window.location= ("../controller/exit.php");
+						
+					}
+				});
+
+		});
 		$("#btn").click(function(){
 			const country=$("#country").val();
 			// alert(country);

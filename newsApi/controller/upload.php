@@ -8,6 +8,14 @@ if(isset($_SESSION['id'])){
 		$oop=new mzobeNewsApi();
 		$response=$oop->getMzobeNews($country);
 	}
+	elseif($_GET['apiremove']){
+		if($conn->query("DELETE FROM newsdb")){
+			$response="true";
+		}
+		else{
+			$response=$conn->error;
+		}
+	}
 	else{
 		$itm_id=$_POST['id'];
 		if(empty($itm_id)){

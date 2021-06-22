@@ -3,6 +3,8 @@ session_start();
 if(isset($_SESSION['id'])){
 	include_once("pdo.php");
 	$_=$_SESSION['id'];
+	$delet=new mzobeNewsApi();
+	// $delet->requestRemovalOfNews();
 	if($conn->query("update user set isloggedin='0' where username='$_'")){
 		if($conn->query("insert into loginattempt(username,status,time_attempt) values('".$_."','-1',NOW())")){
 			unset($_);

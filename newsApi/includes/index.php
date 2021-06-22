@@ -73,11 +73,28 @@ if(isset($_SESSION['id'])){
 				<div class="nav"><h6 style="color:#f3f3f3;"></i>About Me</h6></div>
 			</a>
 		</div>
-		<div class="nav1 right">
-			<a href="../controller/exit.php">
-				<div class="nav"><h6 style="color:#f3f3f3;">Logout</h6></div>
-			</a>
-		</div>
+		<?php 
+			if($map->isNewsLoaded()){
+
+				?>
+				<div class="nav1 right" data-toggle="modal" data-target="#dd">
+					<a >
+						<div class="nav"><h6 style="color:#f3f3f3;">Logout</h6></div>
+					</a>
+				</div>
+				<?php
+			}
+			else{
+				?>
+				<div class="nav1 right" >
+					<a href="../controller/exit.php">
+						<div class="nav"><h6 style="color:#f3f3f3;">Logout</h6></div>
+					</a>
+				</div>
+				<?php
+			}
+		?>
+		
 		
 
 	</div>
@@ -85,6 +102,7 @@ if(isset($_SESSION['id'])){
 
 </header>
 <script>
+
 	$(document).ready(function(){
 		$.ajaxSetup({cache:false});
 		window.setInterval(function(){
